@@ -57,14 +57,20 @@
 .text-custom-primary{
   color: var(--primary-color);
 }
+.text-white{
+  color: white !important;
+}
 .text-custom-secondary{
   color: var(--secondary-color);
 }
 .bg-custom-primary{
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 .bg-custom-secondary{
   background-color: var(--secondary-color);
+}
+.bg-black{
+  background-color: black !important;
 }
 .br-12{
   border-radius: 12px;
@@ -75,12 +81,12 @@
   border-radius: 30px !important;
   border: none !important;
 }
-.btn-primary:hover{
+/* .btn-primary:hover{
   background-color: var(--secondary-color) !important;
   color: white !important;
   border-radius: 30px !important;
   border: none !important;
-}
+} */
 .btn-secondary{
   background-color: black !important;
   color: white !important;
@@ -97,15 +103,14 @@
 }
 .btn-icon .ar-icon {
   opacity: 0;
-  transform: rotate(325deg);
-  transform: translateX(-10px);
+  transform: translateX(-10px) rotate(325deg);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .btn-icon:hover .ar-icon {
   opacity: 1;
-  transform: translateX(0);
-  transform: rotate(325deg);
+  transform: translateX(8px) rotate(325deg);
+ 
 }
 
 @keyframes zoomInOut {
@@ -137,6 +142,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 .banner-box{
 background-color: #b1b1f6b5;
   width: 90%;
@@ -234,7 +240,23 @@ navbar{
     font-size: 3rem;
   }
 }
-
+.wrapper-flex{
+  display: flex;
+  flex-wrap: wrap;
+  .item{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    .icon-div:hover{
+    background-color: white !important;
+    color: black !important;
+    }
+  }
+  .ba-item{
+    flex: 0 0 auto;
+  }
+}
 .section{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -247,6 +269,8 @@ navbar{
   flex-direction: column;
   justify-content: center;
   height: 25rem;
+  z-index: 9;
+  position: relative;
   img{
     width: 130px;
     aspect-ratio: 1 / 1;
@@ -257,12 +281,16 @@ navbar{
     margin-top: 1rem;
     color: black;
     text-align: center;
+    font-size: 3rem;
+
   }
   p{
     color: black;
     text-align: center;
+    font-size: 14px;
   }
 }
+
 /* .card-custom:hover{
   border-radius: 12px;
   background-color: var(--primary-color);
@@ -341,7 +369,20 @@ navbar{
     font-size: 14px;
    }
 }
-
+.curve-top{
+  position: absolute;
+  top: -70px;
+    right: 0px;
+    left: -2px;
+    z-index: -1;
+}
+.curve-bottom{
+  position: absolute;
+  bottom:-70px;
+    right: 0px;
+    left: 0px;
+    z-index: 0;
+}
 .wrapper-contact{
   background-color: #b1b1f6b5;
   height: 500px;
@@ -366,10 +407,16 @@ navbar{
     width: fit-content;
     align-items: center;
   }
-  /* .socia-tag:hover{
-  width: 100%;
-  transition: 1s all ease-out;
-  } */
+  .img-banner{
+    width: 500px;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   position: absolute;
+   top: 0px;
+}
   .footer-t{
     position: absolute;
     bottom: 20px;
@@ -438,6 +485,7 @@ navbar{
     background-color: #b1b1f6b5;
     height: auto;
     padding: 2rem;
+    position: relative;
     .spacing{
       padding-top: 2rem;
       margin-bottom: 2rem;
