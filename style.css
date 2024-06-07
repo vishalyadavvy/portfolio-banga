@@ -99,7 +99,7 @@
 }
 .btn-icon{
   transition:  all 0.3s ease !important;
-  padding-left: 2rem !important;
+   padding: .8rem 1rem .8rem 1.5rem !important
 }
 .btn-icon .ar-icon {
   opacity: 0;
@@ -309,9 +309,12 @@ navbar{
   border-radius: 24px;
   background-color: white;
   display: flex;
+  .first{
+    padding: 3rem 5rem 3rem 3rem;
+  }
 .coverp{
   width: 500px;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
   border-radius: 25px;
 }
@@ -332,6 +335,7 @@ navbar{
     padding-top: 1rem;
     margin-top: 2rem;
   .panel-top{
+    margin-bottom: 1rem;
     .icon-div1{
       width: 80px;
       height: 80px;
@@ -378,7 +382,7 @@ navbar{
 }
 .curve-bottom{
   position: absolute;
-  bottom:-70px;
+  bottom:-95px;
     right: 0px;
     left: 0px;
     z-index: 0;
@@ -448,6 +452,9 @@ navbar{
 
   .card-project{
     display: block;
+    .first{
+      padding: 2rem 2rem 2rem 2rem;
+    }
     .coverp{
      width: 100%;
      height: 300px;
@@ -455,6 +462,14 @@ navbar{
      border-radius: 25px;
    }
    }
+   .truncate {
+    display:block !important;
+    
+    overflow:auto !important;
+    text-overflow:ellipsis;
+    max-height: max-content !important; 
+    line-height: normal !important; /* Adjust line-height accordingly */
+  }
 }
 @media(max-width: 768px){
   
@@ -510,6 +525,22 @@ navbar{
   }
 }
 
+@media(max-width: 576px){
+  .curve-top{
+    position: absolute;
+    top: -70px;
+      right: 0px;
+      left: -2px;
+      z-index: -1;
+  }
+  .curve-bottom{
+    position: absolute;
+    bottom:-80px;
+      right: 0px;
+      left: 0px;
+      z-index: 0;
+  }
+}
 
 /* sidebar wrapper */
 
@@ -520,6 +551,7 @@ navbar{
     justify-content: center;
     align-items: center;
   font-size: 16px;
+  z-index: 9;
 }
 
 .sidebar-wrapper {
@@ -553,4 +585,14 @@ navbar{
 
 .item-link:hover {
   text-decoration: underline;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4.5em; /* Adjust based on line-height */
+  line-height: 1.5em; /* Adjust line-height accordingly */
 }
