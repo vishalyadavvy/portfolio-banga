@@ -413,13 +413,13 @@ navbar{
   }
   .img-banner{
     width: 500px;
-    z-index: -1;
+    z-index: 0;
+    opacity: .4;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
    position: absolute;
-   top: 0px;
 }
   .footer-t{
     position: absolute;
@@ -540,6 +540,23 @@ navbar{
       left: 0px;
       z-index: 0;
   }
+  .wrapper-contact{
+   
+    .img-banner{
+      width: 100%;
+      z-index: 0;
+      opacity: .4;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+     position: absolute;
+  }
+  .footer-t{
+    text-wrap: nowrap;
+  }
+    
+  }
 }
 
 /* sidebar wrapper */
@@ -551,7 +568,7 @@ navbar{
     justify-content: center;
     align-items: center;
   font-size: 16px;
-  z-index: 9;
+  z-index: 99;
 }
 
 .sidebar-wrapper {
@@ -564,7 +581,7 @@ navbar{
   color: white;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 99;
+  z-index: 999;
 }
 
 .sidebar-wrapper.active {
