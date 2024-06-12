@@ -282,7 +282,7 @@ navbar{
     color: black;
     text-align: center;
     font-size: 3rem;
-
+   font-weight: 700;
   }
   p{
     color: black;
@@ -310,7 +310,9 @@ navbar{
   background-color: white;
   display: flex;
   .first{
-    padding: 3rem 5rem 3rem 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 5rem 1rem 3rem;
   }
 .coverp{
   width: 500px;
@@ -375,7 +377,7 @@ navbar{
 }
 .curve-top{
   position: absolute;
-  top: -70px;
+  top: -90px;
     right: 0px;
     left: -2px;
     z-index: -1;
